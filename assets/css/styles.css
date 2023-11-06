@@ -1,0 +1,509 @@
+:root {
+    --white-color: #FFFFFF;
+    --font--family: Arial, Helvetica, sans-serif;
+    --bg-first-color: #39AAE1;
+    --black: #000000;
+    --bg-second-color: #0079c7;
+    --shadow-text: 0px 1px 0px #555555;
+    --bg-third-color: #2b4c99;
+    --strong-gray: #727272;
+    --light-gray: #CCC;
+    --ultralight-gray: #5C5C5C;
+    --border-gray: #2C2C2C;
+}
+
+@keyframes animation-menu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animation-close-menu {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font--family);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+article a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+
+.container {
+    display: flex;
+    width: 990px;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: var(--strong-gray);
+}
+
+nav a:hover, nav .selected a {
+    background-color: var(--bg-first-color);
+    color: var(--white-color);
+}
+
+#banner {
+    background-image: url('../images/img1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 670px;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.banner-headline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-headline h1 {
+    color: var(--white-color);
+    font-size: 70px;
+    text-shadow: var(--shadow-text);
+    max-width: 350px;
+}
+
+.banner-headline h2 {
+    color: var(--white-color);
+    font-size: 21px;
+    text-shadow: var(--shadow-text);
+    width: 300px;
+    margin-top: 30px;
+}
+
+.banner-options {
+    height: 210px;
+    display: flex;
+}
+
+.banner1,
+.banner2,
+.banner3 {
+    flex: 1;
+    color: var(--white-color);
+    padding: 20px;
+}
+
+.banner1 {
+    background-color: var(--bg-first-color);
+}
+
+.banner2 {
+    background-color: var(--bg-second-color);
+}
+
+.banner3 {
+    background-color: var(--bg-third-color);
+}
+
+.banner-title {
+    font-size: 21px;
+}
+
+.banner-desc {
+    font-size: 12px;
+    margin: 20px 0px;
+}
+
+.banner-options a {
+    display: inline-block;
+    border: 1px solid var(--white-color);
+    padding: 6px;
+    color: var(--white-color);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.hours-container {
+    margin-top: 16px;
+}
+
+.hours-area {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 12px 0px;
+}
+
+.hours-week, .hours {
+    color: var(--white-color);
+    font-size: 13px;
+}
+
+#geral {
+    display: flex;
+    justify-content: center;
+}
+
+#geral section {
+    flex: 2;
+}
+
+#geral aside {
+    flex: 1;
+}
+
+.widget-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.widget-title-text {
+    color: var(--black);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.widget-title-bar {
+    background-color: var(--bg-second-color);
+    width: 50px;
+    height: 2px;
+    margin-top: 10px;
+}
+
+.square-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.square {
+    background-color: var(--bg-first-color);
+    height: 70px;
+    width: 47%;
+}
+
+.appointment-text {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.appointment-contact {
+    align-items: center;
+    display: flex;
+    padding: 12px 0px;
+    border-top: 1px solid var(--light-gray);
+}
+
+.square-info {
+    height: 20px;
+    width: 20px;
+    border: 5px solid var(--light-gray);
+    margin-right: 12px;
+}
+
+.appointment-contact p {
+    font-size: 12px;
+}
+
+.appointment-contact a {
+    text-decoration: underline;
+    color: var(--bg-first-color);
+    text-decoration-color: var(--bg-first-color);
+    cursor: pointer;
+}
+
+article {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+article .news-data {
+    display: flex;
+}
+
+article .news-posted-at {
+    background-color: var(--bg-second-color);
+    padding: 10px;
+    color: var(--white-color);
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+article .news-comments {
+    background-color: var(--bg-first-color);
+    padding: 10px;
+    font-size: 12px;
+    color: var(--white-color);
+}
+
+article .news-thumbmail {
+    margin-top: 25px;
+}
+
+article .news-thumbmail img {
+    width: 100%;
+    height: auto;
+}
+
+article .news-title {
+    margin: 25px 0px;
+    font-size: 23px;
+    color: var(--black)
+}
+
+article .news-resume {
+    font-size: 13px;
+    color: var(--ultralight-gray);
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu{
+    display: flex;
+    color: #FFFFFF;
+}
+
+.footer-menu a {
+    display: block;
+    padding: 20px;
+    flex: 1;
+}
+
+.footer-menu .footer-menu-title {
+    font-size: 16px;
+}
+
+.footer-menu .footer-menu-desc {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.fm-1,
+.fm-2,
+.fm-3 {
+    flex: 1;
+}
+
+.fm-1 {
+    background-color: var(--bg-first-color);
+}
+
+.fm-2 {
+    background-color: var(--bg-second-color);
+}
+
+.fm-3  {
+    background-color: var(--bg-third-color);
+}
+
+.footer-area {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+}
+
+.footer-area-item {
+    flex: 1;
+    color: var(--white-color);
+}
+
+footer .widget-title-text {
+    color: var(--white-color)
+}
+
+.footer-copy {
+    border-top: 1px solid var(--border-gray);
+    color: var(--ultralight-gray);
+    font-size: 12px;
+    padding: 12px 0px;
+}
+
+.medicenter-desc {
+    font-size: 12px;
+    color: var(--strong-gray);
+    margin-bottom: 20px;
+}
+
+footer address {
+    font-size: 12px;
+    font-style: normal;
+    color: var(--strong-gray);
+}
+
+footer address .address-info-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0px;
+}
+
+.latest-post-area {
+    color: var(--white-color);
+    font-size: 12px;
+}
+
+.latest-post-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.latest-post-symbol {
+    margin-right: 8px;
+}
+
+.latest-post-container p {
+    font-size: 12px;
+}
+
+.latest-date {
+    color: var(--bg-first-color);
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.twitter-container p,
+.twitter-container .latest-post-symbol {
+    color: var(--strong-gray);
+}
+
+.menu-mobile {
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    opacity: 1;
+}
+
+.mm-line {
+    height: 3px;
+    background-color: var(--bg-first-color);
+}
+
+.animation-menu  {
+    animation: animation-menu 0.5s ease-in;
+}
+
+.animation-close-menu {
+    animation: animation-close-menu 0.5s ease-in;
+}
+
+@media (max-width: 600px) {
+    .banner-headline {
+        padding: 20px;
+    }
+    .banner-headline h1 {
+        font-size: 50px;
+    }
+    .banner-headline h2 {
+        font-size: 17px;
+    }
+    .banner-options {
+        flex-direction: column;
+        height: auto;
+    }
+    #banner {
+        height: auto;
+    }
+    .container {
+        flex-direction: column;
+    }
+    #geral section, aside {
+        padding: 20px;
+    }
+    .footer-menu {
+        flex-direction: column;
+    }
+    .footer-area {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer-copy {
+        padding-left: 20px;
+    }
+    nav ul {
+        display: none;
+        background-color: var(--white-color);
+        position: absolute;
+        flex-direction: column;
+        left: 0px;
+        width: 100%;
+    }
+    header .logo {
+        padding-left: 20px;
+    }
+    header .container {
+        flex-direction: row;
+    }
+    header {
+        height: auto;
+    }
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
