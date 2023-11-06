@@ -20,11 +20,7 @@ function closeMenu() {
 }
 
 function handleMenuPress() {
-    if (menuMobileArea.style.display === 'flex') {
-        closeMenu();
-    } else {
-        openMenu();
-    }
+    return menuMobileArea.style.display === 'flex' ? closeMenu() : openMenu();
 }
 
 menuMobileButton.addEventListener('click', handleMenuPress);
